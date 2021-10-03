@@ -37,7 +37,12 @@ int main()
 				break;
 			}
 			else
+			{
 				valid = true;
+				name[0] = toupper(name[i]);
+				if(isspace(name[i])
+				   name[i+1] = toupper(name[i+1]);
+			}
 		}
 	}
 

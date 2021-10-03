@@ -119,6 +119,7 @@ int main()
 				break;
 
 			case Residential:
+				double exemptedTax;
 				valid = true;
 				cout << "Enter property value: ";
 				cin >> value;
@@ -127,9 +128,9 @@ int main()
 					currentTax = 0.00;
 					totalTax += currentTax;
 				}
+				
 				else
 				{
-					double exemptedTax;
 					currentTax = 0.035 * (value - 100000);
 					if (numberOfProperty == 1)
 					{
@@ -142,11 +143,11 @@ int main()
 							totalTax = 0;
 						}
 					}
-					totalTax += currentTax;
-					cout << "Tax owed for property #" << i << ": $" << fixed << setprecision(2) << currentTax << endl;
-					cout << "Single property tax exemption: $" << fixed << setprecision(2) << exemptedTax << endl;
-					break;
 				}
+				totalTax += currentTax;
+				cout << "Tax owed for property #" << i << ": $" << fixed << setprecision(2) << currentTax << endl;
+				cout << "Single property tax exemption: $" << fixed << setprecision(2) << exemptedTax << endl;
+				break;
 
 			default:
 				cout << "Invalid Property Type. Please enter again." << endl;
